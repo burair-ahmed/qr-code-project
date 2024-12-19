@@ -6,7 +6,7 @@ const path = require("path");
 async function generateQRCode() {
   const uniqueId = uuidv4();
   const qrPath = path.resolve("public/", `${uniqueId}.png`);
-  await QRCode.toFile(qrPath, `https://your-vercel-domain/api/scan?qr_id=${uniqueId}`);
+  await QRCode.toFile(qrPath, `https://qr-code-project-swart.vercel.app/api/scan?qr_id=${uniqueId}`);
   console.log(`QR Code generated: ${qrPath}`);
 }
 
